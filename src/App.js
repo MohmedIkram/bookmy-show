@@ -1,14 +1,14 @@
 import "./App.css";
-import LoginPage from "./components/LoginPage";
-import SecondAppBar from "./components/SecondAppBar";
-import SearchBar from "./components/SearchBar";
-import SignUp from "./components/SignUp";
-import Billing from "./components/Billing";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ResetPassword from "./components/ResetPassword";
+
+import LoginPage from "./components/LoginPage";
+import SignUp from "./components/SignUp";
 import SendEmail from "./components/SendEmail";
+import ResetPassword from "./components/ResetPassword";
 import Book from "./components/Book";
+import Billing from "./components/Billing";
+import SearchBar from "./components/SearchBar";
+import SecondAppBar from "./components/SecondAppBar";
 
 function App() {
   return (

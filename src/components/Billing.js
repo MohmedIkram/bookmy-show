@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-//
+
+/** import from materail ui */
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-
 import Card from "@material-ui/core/Card";
-
 import CardContent from "@material-ui/core/CardContent";
 
 const useStyles = makeStyles({
@@ -114,5 +113,3 @@ const Billing = () => {
   );
 };
 export default Billing;
-
-//
