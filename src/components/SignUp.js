@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 
 /** import from materail ui */
@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignUp() {
+  let History = useHistory();
   const classes = useStyles();
   const handleLogin = () => {
     const myData = {
@@ -56,6 +57,7 @@ export default function SignUp() {
       password,
     };
     axios.post("http://localhost:5000/users/signup", myData);
+    History.push("/");
   };
 
   const [name, setName] = useState("");
