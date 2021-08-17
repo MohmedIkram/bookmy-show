@@ -54,6 +54,7 @@ export default function LoginPage() {
       password,
     };
     axios.post("http://localhost:5000/users/login", myData);
+    history.push("/Home");
   };
 
   return (
