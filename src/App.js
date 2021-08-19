@@ -9,6 +9,8 @@ import Book from "./components/Book";
 import Billing from "./components/Billing";
 import SearchBar from "./components/SearchBar";
 import SecondAppBar from "./components/SecondAppBar";
+import Banners from "./components/Banners";
+import MovieSelect from "./components/MovieSelect";
 
 function App() {
   return (
@@ -18,11 +20,13 @@ function App() {
           <Route exact path="/Home">
             <SearchBar />
             <SecondAppBar />
+            <Banners />
+            <MovieSelect />
           </Route>
           <Route exact path="/Book">
             <Book />
           </Route>
-          <Route exact path="/Billing">
+          <Route exact path="/ticket">
             <Billing />
           </Route>
           <Route exact path="/SignUp">

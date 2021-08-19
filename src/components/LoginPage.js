@@ -48,13 +48,34 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = () => {
+  // const handleSubmit = () => {
+  //   const myData = {
+  //     email,
+  //     password,
+  //   };
+  //   axios.post("http://localhost:5000/users/login", myData);
+  //   // history.push("/Home");
+  //   // history.push(`/Home/${token}`);
+  //   history.push(`/Home/:token`);
+  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const myData = {
       email,
       password,
     };
-    axios.post("http://localhost:5000/users/login", myData);
-    history.push("/Home");
+    axios
+      .post("http://localhost:5000/users/login", myData)
+      .then((response) => {
+        // return  response;
+        localStorage.setItem("auth", JSON.stringify(response.data));
+        const token = localStorage.getItem("token");
+        history.push(`/Home/${token}`);
+      })
+      .catch((error) => {
+        //return  error;
+        history.push(`/`);
+      });
   };
 
   return (
@@ -106,7 +127,7 @@ export default function LoginPage() {
               label="Remember me"
             />
             <Button
-              // type="submit"
+              type="submit"
               fullWidth
               variant="contained"
               color="primary"
