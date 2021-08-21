@@ -70,7 +70,7 @@ export default function LoginPage() {
         // return  response;
         localStorage.setItem("auth", JSON.stringify(response.data));
         const token = localStorage.getItem("token");
-        history.push(`/Home/${token}`);
+        history.push(`/Home`);
       })
       .catch((error) => {
         //return  error;

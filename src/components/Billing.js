@@ -43,16 +43,11 @@ const Billing = () => {
     val3 = JSON.parse(movie);
     console.log(val3);
     const data = window.localStorage.getItem("date");
-    const val4 = JSON.parse(data);
-    const time = window.localStorage.getItem("time");
-    const n = new Date(val4);
-    const date = `${n.getDate()}.${n.getMonth()}.${n.getFullYear()}`;
-    const val5 = JSON.parse(time);
+    const date = new Date().toISOString().slice(0, 10);
     setDate(date);
     setMovie(val3);
     setSeat(val);
     setPrice(val1);
-    setTime(val5);
   }, []);
   return (
     <div>
@@ -66,25 +61,25 @@ const Billing = () => {
             ></Typography>
 
             <Typography variant="body2" component="p">
-              Movie Name---{" "}
+              Movie Name--- Sarpatta Prambarai
             </Typography>
             <Typography variant="body2" component="p">
-              Number of Seats---
+              Number of Seats---{seat.length}
             </Typography>
             <Typography variant="body2" component="p">
-              Seats---{" "}
+              Seats---{seat}
             </Typography>
             <Typography variant="body2" component="p">
-              Show Time---
+              Show Time---3:30pm
             </Typography>
             <Typography variant="body2" component="p">
-              Show Date---{" "}
+              Show Date---{date}
             </Typography>
             <Typography variant="body2" component="p">
               ----------------------------------------------------{" "}
             </Typography>
             <Typography variant="body2" component="p">
-              Total--- ₹
+              Total--- ₹{price}
             </Typography>
             <Typography variant="body2" component="p">
               ----------------------------------------------------{" "}

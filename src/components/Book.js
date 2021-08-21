@@ -30,22 +30,17 @@ const useStyles = makeStyles((theme) => ({
 const Book = () => {
   const classes = useStyles();
   const [book, setBook] = useState([]);
-  const [time, setTime] = useState("");
   const [date, setDate] = useState("");
   const [button, setButton] = useState(false);
 
   useEffect(() => {
     const result = window.localStorage.getItem("book");
     const val = JSON.parse(result);
-    const retrieve = window.localStorage.getItem("time");
-    const valtime = JSON.parse(retrieve);
-    setTime(valtime);
     const dateRet = window.localStorage.getItem("date");
     const date = JSON.parse(dateRet);
     const n = new Date(date);
     const sep = `${n.getDate()}/${n.getMonth() + 1}/${n.getFullYear()}`;
     setDate(sep);
-
     setBook(val);
   }, []);
 
@@ -106,7 +101,7 @@ const Book = () => {
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <div>
-            <Typography>Quartz ₹120</Typography>
+            <Typography>Elite ₹120</Typography>
             <FormGroup row>
               <p>S1</p>
               <FormControlLabel
@@ -1382,7 +1377,7 @@ const Book = () => {
               MovieName:"Sarpatta"
             </Typography>
             <Typography component="h6" variant="h6">
-              Time:{time}
+              Time:4:30pm
             </Typography>
             <Typography component="h6" variant="h6">
               Date:{date}

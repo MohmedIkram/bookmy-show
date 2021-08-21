@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -50,7 +51,7 @@ export default function MovieSelect() {
           <FavoriteIcon />
         </IconButton>
 
-        <Button variant="contained" color="primary" href="/Book">
+        <Button variant="contained" color="primary" component={Link} to="/Book">
           Book Tickets
         </Button>
       </CardActions>
