@@ -76,30 +76,30 @@ const Billing = () => {
               Show Date---{date}
             </Typography>
             <Typography variant="body2" component="p">
-              ----------------------------------------------------{" "}
+              ----------------------------------------------------
             </Typography>
             <Typography variant="body2" component="p">
               Total--- ₹{price}
             </Typography>
             <Typography variant="body2" component="p">
-              ----------------------------------------------------{" "}
+              ----------------------------------------------------
             </Typography>
             <Typography
               className={classes.title}
               color="textSecondary"
               gutterBottom
             >
-              {`T&C`}{" "}
+              {`T&C`}
             </Typography>
             <Typography
               className={classes.title}
               color="textSecondary"
               gutterBottom
             >
-              {`Tickets purchased online are non-transferable and are only valid on the date and schedule number you selected at the time of purchase. Tickets are valid only in the direction of travel selected. A ticket presented for transportation by anyone other than the person for whom the ticket was originally purchased will be void. The unauthorized resale of tickets is strictly prohibited and will be prosecuted. Trailways.com is not responsible for lost or stolen tickets.`}{" "}
+              {`Tickets purchased online are non-transferable and are only valid on the date and schedule number you selected at the time of purchase. Tickets are valid only in the direction of travel selected. A ticket presented for transportation by anyone other than the person for whom the ticket was originally purchased will be void. The unauthorized resale of tickets is strictly prohibited and will be prosecuted. Trailways.com is not responsible for lost or stolen tickets.`}
             </Typography>
             <Typography variant="body2" component="p">
-              ----------------------------------------------------{" "}
+              ----------------------------------------------------
             </Typography>
           </CardContent>
         </Card>

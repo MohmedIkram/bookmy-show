@@ -1386,7 +1386,7 @@ const Book = () => {
           <Card>
             <CardContent>
               <Typography component="h4" variant="h4">
-                Seats booked{" "}
+                Seats booked
               </Typography>
               <div style={{ display: "flex", flexWrap: "wrap" }}>
                 {display.map((x) => (
@@ -1416,12 +1416,10 @@ const Book = () => {
           <Card>
             <CardContent>
               <Typography component="h5" variant="h5">
-                {" "}
                 ({seat.length}) Seats booked
               </Typography>
               <Typography variant="h4" color="h4">
-                {" "}
-                Total:₹ {price}{" "}
+                Total:₹ {price}
               </Typography>
             </CardContent>
             <Button
@@ -1431,7 +1429,7 @@ const Book = () => {
               disabled={button === false}
               href="/ticket"
             >
-              Book ticket{" "}
+              Book ticket
             </Button>
           </Card>
         </Grid>
