@@ -56,7 +56,7 @@ function SendEmail({ classes }) {
       const myData = {
         email,
       };
-      axios.post("http://localhost:5000/users/forgot-password", myData);
+      axios.post("https://bookmyshow-ikram.herokuapp.com/users/forgot-password", myData);
     }
   };
 

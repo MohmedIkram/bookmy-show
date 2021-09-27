@@ -53,7 +53,7 @@ export default function LoginPage() {
   //     email,
   //     password,
   //   };
-  //   axios.post("http://localhost:5000/users/login", myData);
+  //   axios.post("https://bookmyshow-ikram.herokuapp.com/users/login", myData);
   //   // history.push("/Home");
   //   // history.push(`/Home/${token}`);
   //   history.push(`/Home/:token`);
@@ -65,7 +65,7 @@ export default function LoginPage() {
       password,
     };
     axios
-      .post("http://localhost:5000/users/login", myData)
+      .post("https://bookmyshow-ikram.herokuapp.com/users/login", myData)
       .then((response) => {
         // return  response;
         localStorage.setItem("auth", JSON.stringify(response.data));

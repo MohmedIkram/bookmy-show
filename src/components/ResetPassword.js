@@ -55,7 +55,7 @@ function ResetPassword({ classes, token }) {
       const myData = {
         confirmPassword,
       };
-      axios.post(`http://localhost:5000/users/reset-password/${token}`, myData);
+      axios.post(`https://bookmyshow-ikram.herokuapp.com/users/reset-password/${token}`, myData);
       console.log(token);
       setDone(true);
     }

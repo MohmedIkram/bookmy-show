@@ -54,7 +54,7 @@ export default function SignUp() {
       email,
       password,
     };
-    axios.post("http://localhost:5000/users/signup", myData);
+    axios.post("https://bookmyshow-ikram.herokuapp.com/users/signup", myData);
     History.push("/");
   };
 
