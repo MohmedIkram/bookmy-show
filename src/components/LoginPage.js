@@ -65,7 +65,7 @@ export default function LoginPage() {
       password,
     };
     axios
-      .post("https://bookmyshow-ikram.herokuapp.com/users/login", myData)
+      .post("https://password-reset-guvi.herokuapp.com/users/login", myData)
       .then((response) => {
         // return  response;
         localStorage.setItem("auth", JSON.stringify(response.data));
