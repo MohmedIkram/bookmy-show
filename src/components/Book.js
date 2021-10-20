@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 /** import from materail ui */
 import FormGroup from "@material-ui/core/FormGroup";
@@ -31,7 +32,7 @@ const Book = () => {
   const classes = useStyles();
   const [book, setBook] = useState([]);
   const [date, setDate] = useState("");
-  const [button, setButton] = useState(false);
+  const [button, setButton] = useState(true);
 
   useEffect(() => {
     const result = window.localStorage.getItem("book");
@@ -39,7 +40,7 @@ const Book = () => {
     const dateRet = window.localStorage.getItem("date");
     const date = JSON.parse(dateRet);
     const n = new Date(date);
-    const sep = `${n.getDate()}/${n.getMonth() + 1}/${n.getFullYear()}`;
+    const sep = new Date().toLocaleDateString();
     setDate(sep);
     setBook(val);
   }, []);
@@ -1427,7 +1428,9 @@ const Book = () => {
               color="secondary"
               onClick={submit}
               disabled={button === false}
-              href="/ticket"
+              // href="/ticket"
+                component={Link}
+            to="/ticket"
             >
               Book ticket
             </Button>
