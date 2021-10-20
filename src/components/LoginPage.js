@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
-import foodimg from "./foodimg.svg";
+import foodimg from "../Assets/foodimg.svg";
 
 /** import from materail ui */
 import Button from "@material-ui/core/Button";
